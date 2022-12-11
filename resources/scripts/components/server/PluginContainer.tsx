@@ -58,8 +58,8 @@ export default () => {
     return (
         <ServerContentBlock title={'Plugins'}>
             <FlashMessageRender byKey={'server:plugins'} />
-            <h1 className={'j-left text-5xl'}>Plugin Installer</h1>
-            <h3 className={'j-left text-2xl mt-2 text-neutral-500 mb-10'}>Search and download Spigot plugins.</h3>
+            <h1 className={'j-left text-5xl'}>プラグインインストーラー</h1>
+            <h3 className={'j-left text-2xl mt-2 text-neutral-500 mb-10'}>Spigotのプラグインを検索してダウンロードすることができます。</h3>
             <Formik
                 onSubmit={submit}
                 initialValues={{ query: '' }}
@@ -72,12 +72,12 @@ export default () => {
                         <div className={'col-span-11 mr-4'}>
                             <Field
                                 name={'query'}
-                                placeholder={'Type to search...'}
+                                placeholder={'検索に入力する...'}
                                 className={'p-3 text-sm w-full bg-gray-800 rounded'}
                             />
                         </div>
                         <Button type={'submit'}>
-                            Search <Icon.Search size={18} className={'ml-1'} />
+                            探す <Icon.Search size={18} className={'ml-1'} />
                         </Button>
                     </div>
                 </Form>
@@ -85,15 +85,15 @@ export default () => {
             <Dialog.Confirm
                 open={open}
                 onClose={() => setOpen(false)}
-                title={'Plugin Installation'}
+                title={'プラグインインストール'}
                 onConfirmed={() => doDownload(pluginId)}
             >
-                Are you sure you wish to download this plugin?
+                本当にこのプラグインをダウンロードしますか？
             </Dialog.Confirm>
             {!data ? null : (
                 <>
                     {!data.plugins ? (
-                        <p className={'j-up text-gray-400 text-center'}>Waiting for a search query to be provided...</p>
+                        <p className={'j-up text-gray-400 text-center'}>検索クエリに入力されるのを待っています。</p>
                     ) : (
                         <>
                             {data.plugins.length < 1 ? (
