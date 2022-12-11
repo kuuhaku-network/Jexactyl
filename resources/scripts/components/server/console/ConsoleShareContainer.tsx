@@ -28,7 +28,7 @@ export default () => {
                 addFlash({
                     key: 'console:share',
                     type: 'success',
-                    message: 'Your server logs have been saved to the /share folder.',
+                    message: 'サーバーのログが /share フォルダに保存されました。',
                 });
             })
             .catch((error) => {
@@ -52,7 +52,7 @@ export default () => {
                 <span className={'text-gray-400'}>Offline</span>
             ) : (
                 <div className={'cursor-pointer'} onClick={submit}>
-                    Save
+                    保存
                 </div>
             )}
         </>
