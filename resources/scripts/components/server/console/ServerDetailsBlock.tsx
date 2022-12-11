@@ -83,7 +83,7 @@ export default ({ className }: { className?: string }) => {
         <div className={classNames('grid grid-cols-6 gap-2 md:gap-4', className)}>
             <StatBlock icon={faClock} title={'起動時間'}>
                 {status === null ? (
-                    'Offline'
+                    'オフライン'
                 ) : stats.uptime > 0 ? (
                     <UptimeDuration uptime={stats.uptime / 1000} />
                 ) : (
@@ -95,7 +95,7 @@ export default ({ className }: { className?: string }) => {
             </StatBlock>
             <StatBlock icon={faMicrochip} title={'CPU'}>
                 {status === 'offline' ? (
-                    <span className={'text-gray-400'}>Offline</span>
+                    <span className={'text-gray-400'}>オフライン</span>
                 ) : (
                     <Limit limit={textLimits.cpu}>{stats.cpu.toFixed(2)}%</Limit>
                 )}
@@ -109,7 +109,7 @@ export default ({ className }: { className?: string }) => {
             </StatBlock>
             <StatBlock icon={faMemory} title={'メモリ'}>
                 {status === 'offline' ? (
-                    <span className={'text-gray-400'}>Offline</span>
+                    <span className={'text-gray-400'}>オフライン</span>
                 ) : (
                     <Limit limit={textLimits.memory}>{bytesToString(stats.memory)}</Limit>
                 )}
