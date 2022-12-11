@@ -49,7 +49,7 @@ export default () => {
     return (
         <>
             {status === 'offline' ? (
-                <span className={'text-gray-400'}>Offline</span>
+                <span className={'text-gray-400'}>オフライン</span>
             ) : (
                 <div className={'cursor-pointer'} onClick={submit}>
                     保存
