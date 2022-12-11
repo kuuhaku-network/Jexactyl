@@ -42,14 +42,14 @@ export default () => {
     };
 
     const doDownload = (id: number) => {
-        console.log('Installing plugin with ID ' + id);
+        console.log('IDが' + id + 'のプラグインをインストールします。');
         installPlugin(uuid, id)
             .then(() => setOpen(false))
             .then(() =>
                 addFlash({
                     key: 'server:plugins',
                     type: 'success',
-                    message: 'Plugin installed successfully.',
+                    message: 'プラグインが正常にインストールされました。',
                 })
             )
             .catch((error) => clearAndAddHttpError(error));
