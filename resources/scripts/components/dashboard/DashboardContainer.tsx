@@ -57,9 +57,9 @@ export default () => {
             {rootAdmin && (
                 <div css={tw`mb-10 flex justify-between items-center`}>
                     <div>
-                        <h1 className={'j-left text-5xl'}>Your Servers</h1>
+                        <h1 className={'j-left text-5xl'}>あなたのサーバー</h1>
                         <h3 className={'j-left text-2xl mt-2 text-neutral-500'}>
-                            Select a server to view, update or modify.
+                            表示、更新、修正するサーバーを選択する。
                         </h3>
                     </div>
                     <Switch
@@ -89,8 +89,8 @@ export default () => {
                             </div>
                         ) : (
                             <ScreenBlock
-                                title={'Seems quite quiet here...'}
-                                message={'There are no available servers to display.'}
+                                title={'ここは静かだなぁ...'}
+                                message={'表示可能なサーバーがありません。'}
                                 image={NotFoundSvg}
                                 noContainer
                             />
