@@ -27,7 +27,7 @@ export default () => {
                 addFlash({
                     key: 'console:share',
                     type: 'success',
-                    message: 'Server has been renewed.',
+                    message: 'サーバーを更新しました。',
                 });
             })
             .catch((error) => {
@@ -38,7 +38,7 @@ export default () => {
                 addFlash({
                     key: 'console:share',
                     type: 'danger',
-                    message: 'Unable to renew your server. Are you sure you have enough credits?',
+                    message: 'サーバーを更新できません。クレジットは十分ですか？',
                 });
             });
     };
@@ -48,16 +48,16 @@ export default () => {
             <Dialog.Confirm
                 open={open}
                 onClose={() => setOpen(false)}
-                title={'Confirm server renewal'}
+                title={'サーバー更新の確認'}
                 onConfirmed={() => doRenewal()}
             >
                 <SpinnerOverlay visible={loading} />
-                You will be charged {store.renewals.cost} credits to add {store.renewals.days} days until your next
-                renewal is due.
+                {store.renewals.cost} クレジットが請求され、次回まで {store.renewals.days} 日が追加されます
+                更新予定です。
             </Dialog.Confirm>
             in {renewal} days{' '}
             <span className={'text-blue-500 text-sm cursor-pointer'} onClick={() => setOpen(true)}>
-                {'('}Renew{')'}
+                {'('}更新{')'}
             </span>
         </>
     );
