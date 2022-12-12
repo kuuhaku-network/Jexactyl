@@ -43,7 +43,7 @@
                 <div class="info-box">
                     <span class="info-box-icon"><i class="fa fa-server"></i></span>
                     <div class="info-box-content" style="padding: 23px 10px 0;">
-                        <span class="info-box-text">Total Servers</span>
+                        <span class="info-box-text">総サーバー数</span>
                         <span class="info-box-number">{{ count($servers) }}</span>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="info-box">
                     <span class="info-box-icon"><i class="fa fa-wifi"></i></span>
                     <div class="info-box-content" style="padding: 23px 10px 0;">
-                        <span class="info-box-text">Total Allocations</span>
+                        <span class="info-box-text">総割当数</span>
                         <span class="info-box-number">{{ $allocations }}</span>
                     </div>
                 </div>
@@ -61,8 +61,8 @@
                 <div class="info-box">
                     <span class="info-box-icon"><i class="fa fa-pie-chart"></i></span>
                     <div class="info-box-content" style="padding: 23px 10px 0;">
-                        <span class="info-box-text">Total RAM use</span>
-                        <span class="info-box-number">{{ $used['memory'] }} MB of {{ $available['memory'] }} MB</span>
+                        <span class="info-box-text">総RAM使用量</span>
+                        <span class="info-box-number">{{ $used['memory'] }} MB / {{ $available['memory'] }} MB</span>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                     <span class="info-box-icon"><i class="fa fa-hdd-o"></i></span>
                     <div class="info-box-content" style="padding: 23px 10px 0;">
                         <span class="info-box-text">Total disk use</span>
-                        <span class="info-box-number">{{ $used['disk'] }} MB of {{ $available['disk'] }} MB </span>
+                        <span class="info-box-number">{{ $used['disk'] }} MB / {{ $available['disk'] }} MB </span>
                     </div>
                 </div>
             </div>
