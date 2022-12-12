@@ -2,11 +2,11 @@
 @include('partials/admin.jexactyl.nav', ['activeTab' => 'advanced'])
 
 @section('title')
-    Advanced
+    高度
 @endsection
 
 @section('content-header')
-    <h1>Advanced<small>パネルの詳細設定を行います。</small></h1>
+    <h1>高度<small>パネルの詳細設定を行います。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理者</a></li>
         <li class="active">Jexactyl</li>
