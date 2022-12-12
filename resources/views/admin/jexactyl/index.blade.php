@@ -2,13 +2,13 @@
 @include('partials/admin.jexactyl.nav', ['activeTab' => 'index'])
 
 @section('title')
-    Jexactyl Settings
+    Jexactyl設定
 @endsection
 
 @section('content-header')
-    <h1>Jexactyl Settings<small>Configure Jexactyl-specific settings for the Panel.</small></h1>
+    <h1>Jexactyl Settings<small>Panel の Jexactyl 固有の設定を行います。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
+        <li><a href="{{ route('admin.index') }}">管理者</a></li>
         <li class="active">Jexactyl</li>
     </ol>
 @endsection
@@ -25,13 +25,13 @@
                 @endif
             ">
                 <div class="box-header with-border">
-                    <i class="fa fa-code-fork"></i> <h3 class="box-title">Software Release <small>Verify Jexactyl is up-to-date.</small></h3>
+                    <i class="fa fa-code-fork"></i> <h3 class="box-title">ソフトウェアリリース<small>Jexactylが最新であることを確認する。</small></h3>
                 </div>
                 <div class="box-body">
                     @if ($version->isLatestPanel())
-                        You are running Jexactyl <code>{{ config('app.version') }}</code>. 
+                        Jexactyl <code>{{ config('app.version') }}</code>が動作しています。 
                     @else
-                        Jexactyl is not up-to-date. <code>{{ config('app.version') }} (current) -> <a href="https://github.com/jexactyl/jexactyl/releases/v{{ $version->getPanel() }}" target="_blank">{{ $version->getPanel() }}</a> (latest)</code>
+                        Jexactylは最新のものではありません。<code>{{ config('app.version') }} (current) -> <a href="https://github.com/jexactyl/jexactyl/releases/v{{ $version->getPanel() }}" target="_blank">{{ $version->getPanel() }}</a> (latest)</code>
                     @endif
                 </div>
             </div>
@@ -81,22 +81,22 @@
         <div class="col-xs-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <i class="fa fa-bar-chart"></i> <h3 class="box-title">Resource Utilization <small>A glance of the total amount of resources used.</small></h3>
+                    <i class="fa fa-bar-chart"></i> <h3 class="box-title">リソース利用 <small>使用したリソースの総量が一目でわかる。</small></h3>
                 </div>
                 <div class="box-body">
                     <div class="col-xs-12 col-md-4">
                         <canvas id="servers_chart" width="100%" height="50">
-                            <p class="text-muted">No data is available for this chart.</p>
+                            <p class="text-muted">このグラフのデータはありません。</p>
                         </canvas>
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <canvas id="ram_chart" width="100%" height="50">
-                            <p class="text-muted">No data is available for this chart.</p>
+                            <p class="text-muted">このグラフのデータはありません。</p>
                         </canvas>
                     </div>
                     <div class="col-xs-12 col-md-4">
                         <canvas id="disk_chart" width="100%" height="50">
-                            <p class="text-muted">No data is available for this chart.</p>
+                            <p class="text-muted">このグラフのデータはありません。</p>
                         </canvas>
                     </div>
                 </div>
