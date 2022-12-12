@@ -142,13 +142,13 @@ export default () => {
                 {action === 'edit' ? (
                     <Can action={'file.update'}>
                         <Button css={tw`flex-1 sm:flex-none`} onClick={() => save()}>
-                            Save Content
+                            コンテンツを保存
                         </Button>
                     </Can>
                 ) : (
                     <Can action={'file.create'}>
                         <Button css={tw`flex-1 sm:flex-none`} onClick={() => setModalVisible(true)}>
-                            Create File
+                            ファイルを作成
                         </Button>
                     </Can>
                 )}
