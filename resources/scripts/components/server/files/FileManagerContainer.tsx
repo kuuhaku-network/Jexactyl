@@ -80,10 +80,10 @@ export default () => {
     };
 
     return (
-        <ServerContentBlock title={'File Manager'} showFlashKey={'files'}>
-            <h1 className={'j-left text-5xl'}>File Manager</h1>
-            <h3 className={'j-left text-2xl mt-2 text-neutral-500 mb-10'}>Create, edit and view files.</h3>
-            <Input onChange={searchFiles} className={'mb-4 j-up'} placeholder={'Search for files and folders...'} />
+        <ServerContentBlock title={'ファイルマネージャー'} showFlashKey={'files'}>
+            <h1 className={'j-left text-5xl'}>ファイルマネージャー</h1>
+            <h3 className={'j-left text-2xl mt-2 text-neutral-500 mb-10'}>ファイルを作成、編集、閲覧することができます。</h3>
+            <Input onChange={searchFiles} className={'mb-4 j-up'} placeholder={'ファイルやフォルダーの検索...'} />
             <div css={tw`flex flex-wrap-reverse md:flex-nowrap justify-center mb-4`}>
                 <ErrorBoundary>
                     <div className={'j-right'}>
@@ -124,8 +124,7 @@ export default () => {
                                 {files.length > 250 && (
                                     <div css={tw`rounded bg-yellow-400 mb-px p-3`}>
                                         <p css={tw`text-yellow-900 text-sm text-center`}>
-                                            This directory is too large to display in the browser, limiting the output
-                                            to the first 250 files.
+                                            このディレクトリはブラウザに表示するには大きすぎるため、出力は最初の 250 ファイルに制限されています。
                                         </p>
                                     </div>
                                 )}
@@ -139,11 +138,11 @@ export default () => {
                 </>
             )}
             <Can action={'file.sftp'}>
-                <TitledGreyBox title={'SFTP Details'} className={'j-up mt-8 md:mt-6'}>
+                <TitledGreyBox title={'SFTPの詳細'} className={'j-up mt-8 md:mt-6'}>
                     <div>
                         <Label>Server Address</Label>
-                        <CopyOnClick text={`sftp://${ip(sftp.ip)}:${sftp.port}`}>
-                            <Input type={'text'} value={`sftp://${ip(sftp.ip)}:${sftp.port}`} readOnly />
+                        <CopyOnClick text={`sftp://access.barragegames.net:${sftp.port}`}>
+                            <Input type={'text'} value={`sftp://access.barragegames.net:${sftp.port}`} readOnly />
                         </CopyOnClick>
                     </div>
                     <div css={tw`mt-6`}>
@@ -156,13 +155,13 @@ export default () => {
                         <div css={tw`flex-1`}>
                             <div css={tw`border-l-4 border-cyan-500 p-3`}>
                                 <p css={tw`text-xs text-neutral-200`}>
-                                    Your SFTP password is the same as the password you use to access this panel.
+                                    SFTPのパスワードは、このパネルへのアクセスに使用するパスワードと同じです。
                                 </p>
                             </div>
                         </div>
                         <div css={tw`ml-4`}>
                             <a href={`sftp://${username}.${id}@${ip(sftp.ip)}:${sftp.port}`}>
-                                <Button.Text variant={Button.Variants.Secondary}>Launch SFTP</Button.Text>
+                                <Button.Text variant={Button.Variants.Secondary}>SFTPを起動</Button.Text>
                             </a>
                         </div>
                     </div>
