@@ -6,9 +6,9 @@
 @endsection
 
 @section('content-header')
-    <h1>Jexactyl Alerts<small>Send alerts to clients via the UI.</small></h1>
+    <h1>Jexactylアラート<small>UIでクライアントにアラートを送信。</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
+        <li><a href="{{ route('admin.index') }}">管理者</a></li>
         <li class="active">Jexactyl</li>
     </ol>
 @endsection
@@ -20,27 +20,27 @@
             <form action="{{ route('admin.jexactyl.alerts') }}" method="POST">
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Alert Settings <small>Configure settings for the current alert.</small></h3>
+                        <h3 class="box-title">アラート設定 <small>現在のアラートに関する設定を行う。</small></h3>
                     </div>
                     <div class="box-body">
                         <div class="row">
                             <div class="form-group col-md-4">
-                                <label class="control-label">Alert Type</label>
+                                <label class="control-label">アラートの種類</label>
                                 <div>
                                 <select name="alert:type" class="form-control">
-                                        <option @if ($type == 'success') selected @endif value="success">Success</option>
-                                        <option @if ($type == 'info') selected @endif value="info">Info</option>
-                                        <option @if ($type == 'warning') selected @endif value="warning">Warning</option>
-                                        <option @if ($type == 'danger') selected @endif value="danger">Danger</option>
+                                        <option @if ($type == 'success') selected @endif value="success">成功</option>
+                                        <option @if ($type == 'info') selected @endif value="info">情報</option>
+                                        <option @if ($type == 'warning') selected @endif value="warning">警告</option>
+                                        <option @if ($type == 'danger') selected @endif value="danger">危険</option>
                                     </select>
-                                    <p class="text-muted"><small>This is the type of alert that is being sent to the frontend.</small></p>
+                                    <p class="text-muted"><small>これは、フロントエンドに送信されるアラートのタイプです。</small></p>
                                 </div>
                             </div>
                             <div class="form-group col-md-4">
-                                <label class="control-label">Alert Message</label>
+                                <label class="control-label">アラートメッセージ</label>
                                 <div>
                                     <input type="text" class="form-control" name="alert:message" value="{{ $message }}" />
-                                    <p class="text-muted"><small>This is the text which the alert will contain.</small></p>
+                                    <p class="text-muted"><small>これは、アラートが含まれるテキストです。</small></p>
                                 </div>
                             </div>
                         </div>
