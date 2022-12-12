@@ -70,7 +70,7 @@
                 <div class="info-box">
                     <span class="info-box-icon"><i class="fa fa-hdd-o"></i></span>
                     <div class="info-box-content" style="padding: 23px 10px 0;">
-                        <span class="info-box-text">Total disk use</span>
+                        <span class="info-box-text">総ディスク使用量</span>
                         <span class="info-box-number">{{ $used['disk'] }} MB / {{ $available['disk'] }} MB </span>
                     </div>
                 </div>
