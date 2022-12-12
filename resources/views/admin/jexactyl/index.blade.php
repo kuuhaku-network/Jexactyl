@@ -6,7 +6,7 @@
 @endsection
 
 @section('content-header')
-    <h1>Jexactyl Settings<small>Panel の Jexactyl 固有の設定を行います。</small></h1>
+    <h1>Jexactyl設定<small>Panel の Jexactyl 固有の設定を行います。</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">管理者</a></li>
         <li class="active">Jexactyl</li>
